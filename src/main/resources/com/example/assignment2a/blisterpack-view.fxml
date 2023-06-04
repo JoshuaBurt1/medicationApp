@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1400.0" stylesheets="@styleA.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment2a.BlisterPackController">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="1400.0">
+            <children>
+                <Label alignment="CENTER" scaleX="1.5" scaleY="1.5" text="Your Medications" translateX="100.0" translateY="25.0">
+                    <font>
+                        <Font name="Times New Roman" size="24.0" />
+                    </font></Label>
+                <TextField fx:id="nameInput" maxWidth="250" translateX="700.0" translateY="125.0" promptText="Name"/>
+                <TextField fx:id="dosageInput" maxWidth="250" translateX="700.0" translateY="145.0" promptText="Amount" />
+                <TextField fx:id="timeInput" maxWidth="250" translateX="700.0" translateY="165.0" promptText="Time" />
+                <Button mnemonicParsing="false" onMouseClicked="#submit" text="Add Med" translateX="700.0" translateY="170.0" />
+                <Button mnemonicParsing="false" onMouseClicked="#remove" text="Remove Med" translateX="835.0" translateY="126.0" />
+                <ImageView id="emblem" fitHeight="180.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true" translateX="820.0" translateY="-240">
+                    <image>
+                        <Image url="@images/emblem.jpg" />
+                    </image>
+                </ImageView>
+            </children>
+        </VBox>
+        <HBox fx:id="imagesHBox" layoutX="114.0" layoutY="181.0" prefHeight="300.0" prefWidth="700.0" translateX="-150.0" translateY="-120.0">
+            <children>
+                <ImageView fx:id="myImageView" fitHeight="309.0" fitWidth="273.0" pickOnBounds="true" rotate="0.0" translateX="60.0" translateY="10.0">
+                    <!--<image>-->
+                    <!--<Image url="@images/Medication0.jpg" />-->  <!--see BlisterPackController.java for intitial image set-->
+                    <!--</image>-->
+                </ImageView>
+                  <TableView fx:id="tableView" onMouseClicked="#display" minHeight="300" translateX="80.0" translateY="10.0">
+                  <columns>
+                      <TableColumn fx:id="nameColumn" prefWidth="180.0" text="Name" />
+                      <TableColumn fx:id="amountColumn" prefWidth="110.0" text="Amount" />
+                      <TableColumn fx:id="timeColumn" prefWidth="70.0" text="Time" />
+                  </columns>
+                  </TableView>
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </HBox>
+      <HBox minHeight="100.0" minWidth="1100.0" translateX="20.0" translateY="400.0">
+         <children>
+             <Label id="name" style="-fx-font-weight: bold" text="Name: " />
+             <Label fx:id="nameFX" prefHeight="28.0" prefWidth="175.0" text="name" />
+             <Label id="mClass" style="-fx-font-weight: bold" text="Med Class: " />
+             <Label fx:id="mClassFX" prefHeight="28.0" prefWidth="300.0" text="mClass" />
+             <Label id="effect" prefHeight="28.0" style="-fx-font-weight: bold" text="Effect: " />
+             <Label fx:id="effectFX" prefHeight="28.0" prefWidth="250.0" text="effect" />
+         </children>
+      </HBox>
+    <HBox minHeight="100.0" minWidth="1100.0" translateX="20.0" translateY="428.0">
+        <children>
+            <Label id="dosage" style="-fx-font-weight: bold" text="Dosage: " />
+            <Label fx:id="dosageFX" prefWidth="162.0" text="dosage" />
+            <Label id="route" style="-fx-font-weight: bold" text="Route: " />
+            <Label fx:id="routeFX" prefWidth="345.0" text="route" />
+            <Label id="expiration" style="-fx-font-weight: bold" text="Expiration: " />
+            <Label fx:id="expirationFX" prefWidth="175.0" text="expiration" />
+        </children>
+    </HBox>
+    <HBox minHeight="100.0" minWidth="1100.0" translateX="20.0" translateY="456.0">
+        <children>
+            <Label id="price" style="-fx-font-weight: bold" text="Price: " />
+            <Label fx:id="priceFX" prefWidth="180.0" text="price" />
+            <Label id="amount" style="-fx-font-weight: bold" text="Amount: " />
+            <Label fx:id="amountFX" prefWidth="325.0" text="amount" />
+            <Label id="time" style="-fx-font-weight: bold" text="Time: " />
+            <Label fx:id="timeFX" prefWidth="175.0" text="time" />
+        </children>
+    </HBox>
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</AnchorPane>
